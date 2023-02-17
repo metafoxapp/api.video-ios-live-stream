@@ -63,6 +63,15 @@ public class ApiVideoLiveStream {
             self.rtmpStream.videoSettings[.bitrate] = newValue
         }
     }
+    
+    public var isFlashMode: Bool {
+        get {
+            self.rtmpStream.torch
+        }
+        set(newValue) {
+            self.rtmpStream.torch = newValue
+        }
+    }
 
     private var lastCamera: AVCaptureDevice?
 
